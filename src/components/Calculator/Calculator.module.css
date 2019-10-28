@@ -1,0 +1,130 @@
+.Calculator {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 108px;
+  border-bottom: 1px solid #009aff;
+}
+
+.CalculatorHeader {
+  margin-bottom: 27px;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .CalculatorHeader {
+    margin-bottom: 45px;
+    font-size: 60px;
+  }
+}
+
+.Type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.Title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+@media (min-width: 768px) {
+  .Title {
+    font-size: 36px;
+  }
+}
+
+.Time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.Select {
+  position: relative;
+}
+
+.Separator {
+  font-size: 48px;
+  letter-spacing: 0.5px;
+}
+
+.Hour {
+  letter-spacing: 0.7px;
+  font-size: 72px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 30px 7px;
+  margin-right: 26px;
+}
+
+.Minute {
+  margin-left: 26px;
+  letter-spacing: 0.7px;
+  font-size: 72px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 30px 7px;
+}
+
+.Dropdown {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  background-color: #15224d;
+  width: 79%;
+  text-align: center;
+  padding: 28px;
+  font-size: 30px;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  color: #2d4e78;
+  height: 423px;
+  overflow: auto;
+}
+
+.Text {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin: 0 auto;
+  width: max-content;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .Text {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 70px;
+    margin-bottom: 43px;
+  }
+}
+
+.Animate {
+  position: relative;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.Animate img {
+  position: absolute;
+  right: 0;
+  height: 95px;
+  bottom: -113px;
+  border-style: none;
+}
+
+@media (min-width: 768px) {
+  .Animate img {
+    height: auto;
+  }
+}

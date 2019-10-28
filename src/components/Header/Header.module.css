@@ -1,0 +1,23 @@
+.Header {
+  text-align: center;
+  border-bottom: 1px solid #009aff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .Header {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.Header a {
+  text-decoration: none;
+  color: white;
+}
