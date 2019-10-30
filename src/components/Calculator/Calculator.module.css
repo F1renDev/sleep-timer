@@ -32,6 +32,7 @@
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.4px;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -79,15 +80,24 @@
   z-index: 1;
   left: 0;
   background-color: #15224d;
-  width: 79%;
+  width: 33%;
   text-align: center;
   padding: 28px;
   font-size: 30px;
   line-height: 1.6;
   letter-spacing: 0.3px;
   color: #2d4e78;
-  height: 423px;
+  height: 403px;
   overflow: auto;
+}
+
+.Dropdown div:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.DropdownLeft {
+  left: 26px;
 }
 
 .Text {

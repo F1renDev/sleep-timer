@@ -1,0 +1,111 @@
+.SleepInfo {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 45px;
+  padding-bottom: 108px;
+  border-bottom: 1px solid #009aff;
+  text-align: center;
+}
+
+.SleepInfoHeader {
+  margin-bottom: 27px;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .SleepInfoHeader {
+    margin-bottom: 45px;
+    font-size: 60px;
+  }
+}
+
+.Title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .Title {
+    font-size: 36px;
+  }
+}
+
+.Time {
+  margin-bottom: 40px;
+}
+
+.ResultTime {
+  border-radius: 5px;
+  border: 1px solid #009aff;
+  padding: 10px;
+  font-size: 36px;
+  letter-spacing: 0.4px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+  .ResultTime {
+    margin-right: 12px !important;
+  }
+}
+
+.Text {
+  font-size: 20px;
+  line-height: 1.62;
+  letter-spacing: 0.2px;
+  margin: 0 auto 30px;
+  padding: 0 20px 0 20px;
+}
+
+@media (min-width: 768px) {
+  .Text {
+    max-width: 600px;
+  }
+}
+
+.Back {
+  width: 100px;
+  height: 30px;
+  position: relative;
+  color: #43ffff;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  margin-left: 37%;
+  border: 1px solid #009aff;
+  padding-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .Back {
+    display: inline-block;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+.Animate {
+  position: relative;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.Animate img {
+  position: absolute;
+  right: 0;
+  height: 95px;
+  bottom: -113px;
+  border-style: none;
+}
+
+@media (min-width: 768px) {
+  .Animate img {
+    height: auto;
+  }
+}

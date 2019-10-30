@@ -9,7 +9,7 @@ const footer = () => {
         rel='noopener noreferrer'
         target='_blank'
       >
-        © Valentine Maltsev
+        Valentine Maltsev
       </a>
     </div>
   );

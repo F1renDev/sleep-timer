@@ -9,7 +9,7 @@ return (
         target='_blank'
         href='http://f1rendev.netlify.com/'
       >
-        F1ren's Sleep Timer
+        Sleep Timer
       </a>
     </h1>
   );
