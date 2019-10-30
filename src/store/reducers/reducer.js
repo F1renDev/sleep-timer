@@ -4,8 +4,9 @@ const initialState = {
   showCalculator: true,
   showHours: false,
   showMinutes: false,
-  currentHours: `07`,
-  currentMinutes: `00`
+  currentHours: `08`,
+  currentMinutes: `00`,
+  zzzButtonClicked: false
 };
 
 const reducer = (state = initialState, action) => {
@@ -35,6 +36,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         currentMinutes: action.item
       };
+      case actionTypes.ZZZ_BUTTON_CLICKED:
+        return {
+          ...state,
+          zzzButtonClicked: !state.zzzButtonClicked
+        };
     default:
       return state;
   }

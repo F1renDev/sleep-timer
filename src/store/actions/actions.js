@@ -31,3 +31,9 @@ export const setCurrentMinutes = (item) => {
     item: item
   };
 };
+
+export const zzzButtonClicked = () => {
+  return {
+    type: actionTypes.ZZZ_BUTTON_CLICKED
+  };
+};

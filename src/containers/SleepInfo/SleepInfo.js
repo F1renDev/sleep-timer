@@ -5,17 +5,134 @@ import sheepImage from '../../assets/images/sheep.gif';
 
 class SleepInfo extends React.Component {
   render() {
+    /* A function that returns an array of 2 elements being 'Hours' and 'Minutes' to display */
+    const getHoursForDisplay = (
+      currentHours,
+      currentMinutes,
+      subtractedMinutes
+    ) => {
+      let returnedDate = new Date();
+      let returnedArr = [];
+      returnedDate.setHours(currentHours);
+      returnedDate.setMinutes(currentMinutes);
+      /* if zzz button was clicked we count time backwards */
+      if (this.props.zzzButtonClicked) {
+        subtractedMinutes = -Math.abs(subtractedMinutes);
+      }
+      returnedDate.setMinutes(returnedDate.getMinutes() - subtractedMinutes);
+      returnedDate.getHours() < 10
+        ? returnedArr.push('0' + returnedDate.getHours())
+        : returnedArr.push(returnedDate.getHours());
+      returnedDate.getMinutes() < 10
+        ? returnedArr.push('0' + returnedDate.getMinutes())
+        : returnedArr.push(returnedDate.getMinutes());
+      return returnedArr;
+    };
+
+    let displayFirst = getHoursForDisplay(
+      this.props.zzzButtonClicked
+        ? new Date().getHours()
+        : this.props.currentHours,
+      this.props.zzzButtonClicked
+        ? new Date().getMinutes()
+        : this.props.currentMinutes,
+      540
+    );
+
+    let displaySecond = getHoursForDisplay(
+      this.props.zzzButtonClicked
+        ? new Date().getHours()
+        : this.props.currentHours,
+      this.props.zzzButtonClicked
+        ? new Date().getMinutes()
+        : this.props.currentMinutes,
+      450
+    );
+
+    let displayThird = getHoursForDisplay(
+      this.props.zzzButtonClicked
+        ? new Date().getHours()
+        : this.props.currentHours,
+      this.props.zzzButtonClicked
+        ? new Date().getMinutes()
+        : this.props.currentMinutes,
+      360
+    );
+
+    let displayFourth = getHoursForDisplay(
+      this.props.zzzButtonClicked
+        ? new Date().getHours()
+        : this.props.currentHours,
+      this.props.zzzButtonClicked
+        ? new Date().getMinutes()
+        : this.props.currentMinutes,
+      270
+    );
+
+    let displayFifth = getHoursForDisplay(
+      this.props.zzzButtonClicked
+        ? new Date().getHours()
+        : this.props.currentHours,
+      this.props.zzzButtonClicked
+        ? new Date().getMinutes()
+        : this.props.currentMinutes,
+      180
+    );
+
+    let displaySixth = getHoursForDisplay(
+      this.props.zzzButtonClicked
+        ? new Date().getHours()
+        : this.props.currentHours,
+      this.props.zzzButtonClicked
+        ? new Date().getMinutes()
+        : this.props.currentMinutes,
+      90
+    );
+
+    const onBackButtonClickFunctions = () => {
+      this.props.switchShowCalc();
+      if (this.props.zzzButtonClicked) {
+        this.props.onZzzButtonClicked();
+      }
+    };
+
+    const outputArr = [
+      <div key={1} className={styles.ResultTime}>
+        {displayFirst[0]}:{displayFirst[1]}
+      </div>,
+      <div key={2} className={styles.ResultTime}>
+        {displaySecond[0]}:{displaySecond[1]}
+      </div>,
+      <div key={3} className={styles.ResultTime}>
+        {displayThird[0]}:{displayThird[1]}
+      </div>,
+      <div key={4} className={styles.ResultTime}>
+        {displayFourth[0]}:{displayFourth[1]}
+      </div>,
+      <div key={5} className={styles.ResultTime}>
+        {displayFifth[0]}:{displayFifth[1]}
+      </div>,
+      <div key={6} className={styles.ResultTime}>
+        {displaySixth[0]}:{displaySixth[1]}
+      </div>
+    ];
+
     return (
       <div className={styles.SleepInfo}>
         <div className={styles.SleepInfoHeader}>SLEEP TIME</div>
-        <div className={styles.Title}>Go to bed at this time:</div>
+        <div className={styles.Title}>
+          {this.props.zzzButtonClicked
+            ? 'Set an alarm for this time:'
+            : 'Go to bed at this time:'}
+        </div>
         <div className={styles.Time}>
-          <div className={styles.ResultTime}>22:00</div>
-          <div className={styles.ResultTime}>23:30</div>
-          <div className={styles.ResultTime}>01:00</div>
-          <div className={styles.ResultTime}>02:30</div>
-          <div className={styles.ResultTime}>04:00</div>
-          <div className={styles.ResultTime}>05:30</div>
+          {this.props.zzzButtonClicked
+            ? outputArr.reverse().map((item) => {
+                return item;
+              })
+            : outputArr.map((item) => {
+                return item;
+              })}
         </div>
         <p className={styles.Text}>
           You can sleep even 10 hours a day and still feel broken or you can
@@ -29,7 +146,9 @@ class SleepInfo extends React.Component {
         <p className={styles.Text}>
           Sweet dreams. And don't forget to set the alarm!
         </p>
-        <p onClick={this.props.switchShowCalc} className={styles.Back}>BACK</p>
+        <p onClick={() => onBackButtonClickFunctions()} className={styles.Back}>
+          BACK
+        </p>
         <div className={styles.Animate}>
           <img src={sheepImage} alt='a sheep' />
         </div>

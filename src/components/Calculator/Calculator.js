@@ -58,6 +58,11 @@ class Calcucator extends React.Component {
       this.props.switchShowMinutes();
     };
 
+    const zzzButtonOnclickFunctions = () => {
+      this.props.switchShowCalc();
+      this.props.zzzButtonClicked();
+    };
+
     return (
       <div className={styles.Calculator}>
         <div className={styles.CalculatorHeader}>SLEEP TIME</div>
@@ -111,7 +116,7 @@ class Calcucator extends React.Component {
             When should I get up if I go to bed right now...
           </div>
         </div>
-        <Button clicked={this.props.switchShowCalc}>Zzz</Button>
+        <Button clicked={() => zzzButtonOnclickFunctions()}>Zzz</Button>
         <div className={styles.Animate}>
           <img src={sheepImage} alt='a sheep' />
         </div>

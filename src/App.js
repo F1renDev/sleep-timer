@@ -24,9 +24,16 @@ class App extends React.Component {
             switchShowCalc={this.props.onSwitchShowCalculator}
             setCurrentHours={this.props.onSetCurrentHours}
             setCurrentMinutes={this.props.onSetCurrentMinutes}
+            zzzButtonClicked={this.props.onZzzButtonClick}
           />
         ) : (
-          <SleepInfo switchShowCalc={this.props.onSwitchShowCalculator} />
+          <SleepInfo
+            currentHours={this.props.currentHours}
+            currentMinutes={this.props.currentMinutes}
+            switchShowCalc={this.props.onSwitchShowCalculator}
+            zzzButtonClicked={this.props.zzzButtonClicked}
+            onZzzButtonClicked={this.props.onZzzButtonClick}
+          />
         )}
         <Footer />
       </div>
@@ -40,7 +47,8 @@ const mapStateToProps = (state) => {
     showHours: state.showHours,
     showMinutes: state.showMinutes,
     currentHours: state.currentHours,
-    currentMinutes: state.currentMinutes
+    currentMinutes: state.currentMinutes,
+    zzzButtonClicked: state.zzzButtonClicked
   };
 };
 
@@ -51,6 +59,7 @@ const mapDispatchToProps = (dispatch) => {
     onSwitchShowMinutes: () => dispatch(actions.switchShowMinutes()),
     onSetCurrentHours: (item) => dispatch(actions.setCurrentHours(item)),
     onSetCurrentMinutes: (item) => dispatch(actions.setCurrentMinutes(item)),
+    onZzzButtonClick: () => dispatch(actions.zzzButtonClicked())
   };
 };
 
