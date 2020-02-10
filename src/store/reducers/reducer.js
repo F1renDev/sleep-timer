@@ -1,4 +1,4 @@
-import * as actionTypes from '../actions/actionTypes';
+import * as actionTypes from "../actions/actionTypes";
 
 const initialState = {
   showCalculator: true,
@@ -36,11 +36,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         currentMinutes: action.item
       };
-      case actionTypes.ZZZ_BUTTON_CLICKED:
-        return {
-          ...state,
-          zzzButtonClicked: !state.zzzButtonClicked
-        };
+    case actionTypes.ZZZ_BUTTON_CLICKED:
+      return {
+        ...state,
+        zzzButtonClicked: !state.zzzButtonClicked
+      };
     default:
       return state;
   }

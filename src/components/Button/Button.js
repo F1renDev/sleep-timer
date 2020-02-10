@@ -1,7 +1,7 @@
-import React from 'react';
-import styles from './Button.module.css';
+import React from "react";
+import styles from "./Button.module.css";
 
-const button = (props) => {
+const button = props => {
   return (
     <div onClick={props.clicked} className={styles.Button}>
       {props.children}

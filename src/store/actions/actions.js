@@ -1,4 +1,4 @@
-import * as actionTypes from './actionTypes';
+import * as actionTypes from "./actionTypes";
 
 export const switchShowCalculator = () => {
   return {
@@ -18,14 +18,14 @@ export const switchShowMinutes = () => {
   };
 };
 
-export const setCurrentHours = (item) => {
+export const setCurrentHours = item => {
   return {
     type: actionTypes.SET_CURRENT_HOURS,
     item: item
   };
 };
 
-export const setCurrentMinutes = (item) => {
+export const setCurrentMinutes = item => {
   return {
     type: actionTypes.SET_CURRENT_MINUTES,
     item: item
